@@ -1,0 +1,34 @@
+#mainPanel, #contentPanel{
+}
+
+#background{
+    -fx-background-color: #c9c9c9;
+}
+
+.button{
+    -fx-background-insets: 0,0 0 5 0, 0 0 6 0, 0 0 7 0;
+    -fx-font-size: 12;
+    -fx-padding: 8 10 10 10;
+    -fx-background-color: rgba(246, 246, 246, 0.5);
+}
+
+.button:hover{
+    -fx-background-color: rgba(246, 246, 246, 0.77);
+}
+
+.list-view {
+    -fx-background-color: rgba(255, 255, 255, 0);
+}
+
+.list-view .list-cell:hover {
+    -fx-background-color: rgba(0, 0, 0, 0.15);
+}
+
+.list-view .list-cell:selected {
+    -fx-background-color: rgb(101, 187, 133);
+}
+
+.list-view .list-cell {
+    -fx-background-color: rgba(255, 255, 255, 0);
+    -fx-text-fill: black;
+}

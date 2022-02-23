@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import org.kordamp.ikonli.javafx.*?>
+
+<Pane fx:id="background" prefHeight="600.0" prefWidth="800.0"
+      stylesheets="@../style/themes/style_white.css" xmlns="http://javafx.com/javafx/11.0.2"
+      xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.madirex.javafxmenu.controller.MainController">
+   <children>
+      <Pane fx:id="mainPanel">
+         <children>
+            <VBox fx:id="panelMenu" prefWidth="127.0" stylesheets="@../style/style_menu.css">
+               <children>
+                  <ImageView fitHeight="22.0" fitWidth="114.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/logo.png" />
+                     </image>
+                     <VBox.margin>
+                        <Insets bottom="20.0" left="5.0" top="20.0" />
+                     </VBox.margin>
+                  </ImageView>
+                  <Button contentDisplay="LEFT" minWidth="127" nodeOrientation="LEFT_TO_RIGHT" onAction="#onContactsViewButtonClick">
+
+                     <graphic>
+                        <HBox alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mouseTransparent="true">
+                           <children>
+                              <FontIcon iconLiteral="fas-users" />
+                              <Pane HBox.hgrow="ALWAYS" />
+                              <Label text="%button.contacts">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                     </graphic>
+                  </Button>
+                  <Button contentDisplay="LEFT" minWidth="127" nodeOrientation="LEFT_TO_RIGHT" onAction="#onSettingsButtonClick">
+                     <graphic>
+                        <HBox alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mouseTransparent="true">
+                           <children>
+                              <FontIcon iconLiteral="fas-cog" />
+                              <Pane HBox.hgrow="ALWAYS" />
+                              <Label text="%button.settings">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                     </graphic>
+                  </Button>
+                  <Button contentDisplay="LEFT" minWidth="127" nodeOrientation="LEFT_TO_RIGHT" onAction="#onPanelTableButtonClick">
+                     <graphic>
+                        <HBox alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mouseTransparent="true">
+                           <children>
+                              <FontIcon iconLiteral="fas-table" />
+                              <Pane HBox.hgrow="ALWAYS" />
+                              <Label text="%title.table">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                     </graphic>
+                  </Button>
+                  <Button contentDisplay="LEFT" minWidth="127" nodeOrientation="LEFT_TO_RIGHT" onAction="#onPanelChartsButtonClick">
+                     <graphic>
+                        <HBox alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mouseTransparent="true">
+                           <children>
+                              <FontIcon iconLiteral="fas-chart-pie" />
+                              <Pane HBox.hgrow="ALWAYS" />
+                              <Label text="%title.charts">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                     </graphic>
+                  </Button>
+                  <Button contentDisplay="LEFT" minWidth="127" nodeOrientation="LEFT_TO_RIGHT" onAction="#exitProgram">
+                     <graphic>
+                        <HBox alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mouseTransparent="true">
+                           <children>
+                              <FontIcon iconLiteral="fas-door-closed" />
+                              <Pane HBox.hgrow="ALWAYS" />
+                              <Label text="%button.exit">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                     </graphic>
+                  </Button>
+               </children>
+            </VBox>
+            <VBox fx:id="contentPanel">
+               <children>
+                  <Button fx:id="menuButton" alignment="TOP_LEFT" text="%menu" onAction="#onMenuShowButtonClick">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <graphic>
+                        <FontIcon iconLiteral="fas-bars" />
+                     </graphic>
+                  </Button>
+                  <StackPane prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <fx:include fx:id="contactsView" source="contacts-view.fxml" />
+                        <fx:include fx:id="settings" source="settings.fxml" visible="false" disable="true"/>
+                        <fx:include fx:id="panelTable" source="panelTable.fxml" visible="false" disable="true"/>
+                        <fx:include fx:id="panelCharts" source="panelCharts.fxml" visible="false" disable="true"/>
+                     </children>
+                  </StackPane>
+               </children>
+            </VBox>
+         </children>
+      </Pane>
+   </children>
+</Pane>

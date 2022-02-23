@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.madirex.javafxmenu.controller.PanelTableController">
+   <Label minWidth="400" text="%title.table" textAlignment="CENTER">
+      <font>
+         <Font name="Arial" size="18.0" />
+      </font>
+      <VBox.margin>
+         <Insets bottom="20.0" left="50.0" right="50.0" top="50.0" />
+      </VBox.margin>
+   </Label>
+   <VBox fx:id="content">
+      <VBox.margin>
+         <Insets bottom="20.0" left="50.0" right="50.0" top="10.0" />
+      </VBox.margin>
+      <children>
+         <TableView fx:id="table" minWidth="510.0" prefHeight="200.0">
+           <columns>
+            <TableColumn fx:id="name" prefWidth="85.0" text="%person.name" />
+            <TableColumn fx:id="gender" prefWidth="85.0" text="%person.gender" />
+            <TableColumn fx:id="country" prefWidth="85.0" text="%person.country" />
+            <TableColumn fx:id="email" prefWidth="85.0" text="%person.mail" />
+            <TableColumn fx:id="phone" prefWidth="85.0" text="%person.phone" />
+            <TableColumn fx:id="age" prefWidth="85.0" text="%person.age" />
+           </columns>
+         </TableView>
+      </children>
+   </VBox>
+</VBox>
